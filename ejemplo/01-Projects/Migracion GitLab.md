@@ -1,0 +1,34 @@
+---
+tipo: proyecto
+estado: activo
+tags: [proyecto, gitlab]
+personas:
+  - "[[Diana Sosa]]"
+  - "[[Lucia Ferreyra]]"
+area: "[[SRE MOC]]"
+fecha_inicio: 2026-06-01
+deadline: 2026-09-30
+up: "[[Proyectos Activos MOC]]"
+---
+
+# Migración GitLab
+
+## Objetivo
+
+Migrar 140 repos desde el server legacy a GitLab SaaS con gobernanza única y apagado ordenado del server viejo (30 días de gracia).
+
+## Estado actual
+
+- 60% de repos migrados. Mapeo de grupos/permisos completo.
+- Trabado: acceso admin para el apagado final — owner [[Andres Paez]].
+
+## Hitos / Tareas
+
+- [x] Mapeo permisos — ✅ 2026-07-15
+- [ ] Migrar repos restantes — 📅 2026-09-05
+- [ ] Apagado server legacy — 📅 2026-09-30
+
+## Decisiones
+
+- 2026-08-19 — RACI del proyecto pasa a [[Diana Sosa]] (transferencia real, sale de mis acuerdos). [[2026-08-19]]
+- 2026-07-02 — Se migra por squad, no por repo suelto. [[2026-08-18 Sync Lucia]]

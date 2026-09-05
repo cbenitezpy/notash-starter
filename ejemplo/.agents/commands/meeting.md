@@ -1,5 +1,3 @@
-<!-- GENERADO por .agents/sync.sh — NO EDITAR. Fuente: .agents/commands/meeting.md -->
-
 Workflow para procesar un transcript crudo de meeting en el vault.
 
 Input: un archivo en `04-Archive/Transcripts/*.md` con `procesado: false` (o el que indique el usuario).
@@ -13,7 +11,7 @@ Input: un archivo en `04-Archive/Transcripts/*.md` con `procesado: false` (o el 
 3. Atomizar — cada cosa va a donde vive:
    - **Acuerdos por persona** → append en `## Acuerdos vivos` de `05-People/<Persona>.md`
    - **Decisiones que afectan proyecto** → append en `## Decisiones` del proyecto
-   - **Bloqueos nuevos** → `02-Areas/Bloqueos.md` con owner y fecha
+   - **Bloqueos nuevos** → `02-Areas/SRE/Bloqueos.md` con owner y fecha
    - **Bloqueos destrabados** → mover a Cerrados con evidencia (el transcript ES la evidencia, linkearlo)
    - **Todo** → reflejar en el daily de hoy (Decisiones / Bloqueos / Personas)
 

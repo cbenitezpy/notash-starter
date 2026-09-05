@@ -1,5 +1,3 @@
-<!-- GENERADO por .agents/sync.sh — NO EDITAR. Fuente: .agents/commands/meeting.md -->
-
 Workflow para procesar un transcript crudo de meeting en el vault.
 
 Input: un archivo en `04-Archive/Transcripts/*.md` con `procesado: false` (o el que indique el usuario).

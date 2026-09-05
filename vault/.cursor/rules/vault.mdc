@@ -1,5 +1,5 @@
 ---
-description: Reglas del vault Obsidian daily-first. Fuente de verdad del contexto: CLAUDE.md en la raíz.
+description: Reglas del vault Obsidian daily-first. La fuente de verdad del contexto es CLAUDE.md (referenciado abajo).
 alwaysApply: true
 ---
 
@@ -8,24 +8,19 @@ alwaysApply: true
 Este NO es un repo de código. Es memoria operativa navegable: un vault Obsidian **daily-first**
 con un radar de bloqueos y una weekly que audita.
 
-**Leer `CLAUDE.md` (raíz del vault) antes de cualquier tarea.** Ahí está quién es el usuario,
-qué es valor en su rol, la estructura de carpetas y las reglas innegociables. Este archivo
-no las duplica — las apunta.
+El contexto completo (quién es el usuario, qué es valor en su rol, estructura, reglas) está en:
 
-## Comandos disponibles
+@CLAUDE.md
 
-- `/hoy` — prepara el daily de hoy (arrastre de bloqueos desde la fuente, foco top 3, check de tareas fuera de rol)
-- `/meeting` — atomiza un transcript crudo: acuerdos → personas, decisiones → proyectos, bloqueos → radar
-- `/semana` — audita la semana: métricas vs anterior, ✅ falsos, loops desaparecidos, zombies, veredicto
+## Comandos
 
-Los prompts completos están en `.cursor/commands/` (y espejados en `.gemini/commands/`).
+`/hoy`, `/meeting`, `/semana` — están en `.cursor/commands/` (generados desde `.agents/commands/`,
+la fuente única; editar ahí y correr `.agents/sync.sh`).
 
 ## Reglas de interacción
 
-1. **Una pregunta por vez.** Si faltan 3 datos (persona, proyecto, fecha), preguntar el primero,
-   esperar, y recién después el siguiente. Nunca "Pregunta 1 / 2 / 3" en un solo mensaje.
-2. **No inventar owners ni fechas.** Si un acuerdo no tiene dueño o fecha, preguntar — no rellenar.
-3. **No crear stubs.** No crear notas nuevas para wikilinks que no existen sin confirmar.
-4. **Frontmatter obligatorio** en toda nota; wikilinks en YAML entre comillas dobles.
+1. **Una pregunta por vez.** Si faltan 3 datos, preguntar el primero, esperar, y recién después el siguiente.
+2. **No inventar owners ni fechas.** Si falta, preguntar — no rellenar.
+3. **No crear stubs** para wikilinks inexistentes sin confirmar.
+4. **Frontmatter obligatorio**; wikilinks en YAML entre comillas dobles.
 5. **El transcript crudo nunca se borra** — es la evidencia, se linkea.
-

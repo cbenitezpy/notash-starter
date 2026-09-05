@@ -1,0 +1,5 @@
+---
+description: Prepara el daily de hoy: arrastre de bloqueos desde la fuente, foco top 3, check de tareas fuera de rol
+---
+
+@.agents/commands/hoy.md

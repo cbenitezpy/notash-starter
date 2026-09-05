@@ -36,7 +36,8 @@ notash-starter/
 3. Instalá los community plugins sugeridos (Obsidian te los va a ofrecer desde
    `.obsidian/community-plugins.json`): **dataview, templater, tasks, calendar**.
 4. **Personalizá `vault/CLAUDE.md`** — es el corazón del sistema. Tu rol, tu gente,
-   tu definición de valor. 10 minutos bien invertidos.
+   tu definición de valor. 10 minutos bien invertidos. Después corré `.agents/sync.sh`
+   para que Cursor y Copilot reciban el cambio (el resto lo lee en vivo).
 5. Conectá tu agente (ver `docs/setup-agentes.md`):
    - **Claude Code:** abrí una terminal en el vault y listo — lee `CLAUDE.md` solo.
    - **Cursor:** abrí la carpeta; las reglas (`.cursor/rules/`) y los comandos

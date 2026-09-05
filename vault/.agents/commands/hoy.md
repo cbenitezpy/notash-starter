@@ -1,12 +1,10 @@
-<!-- GENERADO por .agents/sync.sh — NO EDITAR. Fuente: .agents/commands/hoy.md -->
-
 Workflow VP para preparar la nota diaria de hoy en el vault.
 
 El usuario es VP SRE. Su rol: destrabar bloqueos, tomar decisiones, gestionar gente. NO ejecutar tareas IC.
 
 ## Pasos
 
-1. Leer el daily de ayer (con retroceso de fin de semana) + el radar `02-Areas/SRE/Bloqueos.md` + `05-People/*.md`.
+1. Leer el daily de ayer (con retroceso de fin de semana) + el radar `02-Areas/Bloqueos.md` + `05-People/*.md`.
 2. Arrastrar bloqueos abiertos DESDE LA FUENTE (nunca desde memoria), con owner y días de antigüedad.
 3. Construir Foco VP (top 3), ranking:
    1. Bloqueos abiertos >2 días sin destrabar

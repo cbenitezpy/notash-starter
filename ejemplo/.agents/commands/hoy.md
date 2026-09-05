@@ -1,5 +1,3 @@
-<!-- GENERADO por .agents/sync.sh — NO EDITAR. Fuente: .agents/commands/hoy.md -->
-
 Workflow VP para preparar la nota diaria de hoy en el vault.
 
 El usuario es VP SRE. Su rol: destrabar bloqueos, tomar decisiones, gestionar gente. NO ejecutar tareas IC.

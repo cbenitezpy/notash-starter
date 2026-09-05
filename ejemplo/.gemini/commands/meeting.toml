@@ -1,33 +1,5 @@
-description = "Procesa un transcript crudo: atomiza acuerdos a personas, decisiones a proyectos, bloqueos al radar y al daily."
+description = "Atomiza un transcript crudo: acuerdos → personas, decisiones → proyectos, bloqueos → radar"
 
 prompt = """
-Workflow para procesar un transcript crudo de meeting en el vault.
-
-Input: un archivo en `04-Archive/Transcripts/*.md` con `procesado: false` (o el que indique el usuario).
-
-## Pasos
-
-1. Leer el transcript completo. Identificar: participantes, acuerdos, decisiones, bloqueos nuevos/destrabados, tareas.
-
-2. Crear la nota de meeting en `Meetings/YYYY-MM-DD <Tema>.md` con frontmatter (tipo: meeting, personas como wikilinks entre comillas dobles) y secciones: Contexto / Acuerdos (con owner y 📅) / Decisiones / Follow-ups.
-
-3. Atomizar — cada cosa va a donde vive:
-   - **Acuerdos por persona** → append en `## Acuerdos vivos` de `05-People/<Persona>.md`
-   - **Decisiones que afectan proyecto** → append en `## Decisiones` del proyecto
-   - **Bloqueos nuevos** → `02-Areas/SRE/Bloqueos.md` con owner y fecha
-   - **Bloqueos destrabados** → mover a Cerrados con evidencia (el transcript ES la evidencia, linkearlo)
-   - **Todo** → reflejar en el daily de hoy (Decisiones / Bloqueos / Personas)
-
-4. Detección obligatoria:
-   - ⚠ **Tarea IC del usuario**: si el usuario se comprometió a ejecutar algo técnico, flaggearlo — ¿se delega o cuenta como IC en el cierre?
-   - ⚠ **Acuerdo sin owner o sin fecha**: preguntarlo antes de guardar, no inventar.
-   - ✅ **Delegación bien hecha**: si el usuario delegó algo en la reunión, registrarlo como win.
-
-5. Marcar el transcript `procesado: true` y reportar resumen: N acuerdos (a quién), N decisiones (a qué proyecto), N bloqueos nuevos/cerrados, flags IC.
-
-## Reglas
-
-- Wikilinks en YAML entre comillas dobles. Frontmatter obligatorio.
-- No inventar owners ni fechas: preguntar.
-- El transcript crudo NO se borra — queda como evidencia linkeada.
+@{.agents/commands/meeting.md}
 """

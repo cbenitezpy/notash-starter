@@ -1,3 +1,5 @@
+<!-- GENERADO por .agents/sync.sh — NO EDITAR. Fuente: .agents/commands/semana.md -->
+
 Weekly review VP del vault. Métricas: bloqueos resueltos (con evidencia), decisiones tomadas, personas tocadas, role drift IC. NO tareas hechas (eso es IC).
 
 ## Pasos

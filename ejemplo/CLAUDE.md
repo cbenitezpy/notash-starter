@@ -53,6 +53,7 @@ Listas en formato multiline.
 ## Flujo de meetings
 
 - Transcripts crudos entran en `04-Archive/Transcripts/` con `procesado: false`.
+- Los prompts de `/hoy`, `/meeting` y `/semana` viven en `.agents/commands/` (fuente única).
 - `/meeting` los atomiza: acuerdos → `05-People/`, decisiones → proyecto, bloqueos → radar + daily de hoy.
 - El transcript nunca se borra: es la evidencia, se linkea.
 - Al procesar, flaggear: tareas IC que el usuario se auto-asignó, acuerdos sin owner o sin fecha.

@@ -4,7 +4,7 @@
 
 Sistema de gestión personal para roles de liderazgo (aunque sirve para cualquiera):
 un vault de Obsidian donde el motor es la cronología —no las carpetas— y un agente de IA
-(Claude, Copilot o Gemini) que vive adentro de los archivos: prepara tu día, atomiza tus
+(Claude, Cursor, Copilot o Gemini) que vive adentro de los archivos: prepara tu día, atomiza tus
 reuniones y audita tu semana. Sin piedad.
 
 La idea completa está contada en la charla/artículo *"Cómo dejé de perder el contexto en el mundo real"*.
@@ -39,8 +39,11 @@ notash-starter/
    tu definición de valor. 10 minutos bien invertidos.
 5. Conectá tu agente (ver `docs/setup-agentes.md`):
    - **Claude Code:** abrí una terminal en el vault y listo — lee `CLAUDE.md` solo.
+   - **Cursor:** abrí la carpeta; las reglas (`.cursor/rules/`) y los comandos
+     (`.cursor/commands/`) se cargan solos.
    - **Copilot:** lee `.github/copilot-instructions.md`.
    - **Gemini CLI:** los comandos están en `.gemini/commands/`.
+   - Cualquier otro agente que siga el estándar `AGENTS.md` también funciona.
 6. Corré tu primer `/hoy`. Mañana otro. El viernes, `/semana`. Ahí empieza la magia.
 
 ## Los 3 comandos
@@ -61,7 +64,7 @@ para que pruebes `/meeting` vos mismo. Abrilo como segundo vault y explorá.
 ## Requisitos
 
 - [Obsidian](https://obsidian.md) (gratis)
-- Un agente que lea archivos: [Claude Code](https://claude.com/claude-code), GitHub Copilot, o Gemini CLI
+- Un agente que lea archivos: [Claude Code](https://claude.com/claude-code), [Cursor](https://cursor.com), GitHub Copilot, o Gemini CLI
 - Plugins de Obsidian: dataview, templater-obsidian, obsidian-tasks-plugin, calendar
 
 ## Licencia

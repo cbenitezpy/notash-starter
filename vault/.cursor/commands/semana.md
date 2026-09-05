@@ -1,0 +1,14 @@
+Weekly review VP del vault. Métricas: bloqueos resueltos (con evidencia), decisiones tomadas, personas tocadas, role drift IC. NO tareas hechas (eso es IC).
+
+## Pasos
+
+1. Leer todos los dailies de la semana (lunes-domingo).
+2. Extraer por daily: decisiones, bloqueos resueltos/abiertos, personas, tareas IC, energía.
+3. Detectar patrones: clusters de bloqueos, personas con 0 menciones (neglect), decisiones que se atrasan semana tras semana, role drift.
+4. Cazar ✅ falsos: cierres sin evidencia se reclasifican como abiertos.
+5. Cazar loops desaparecidos: item que estaba en el radar y no aparece en NINGÚN daily = no está resuelto, está invisible. Peor.
+6. Tabla de métricas W vs W-1 con deltas.
+7. Foco hit-rate: comparar `## Foco` declarado vs outcomes registrados.
+8. Preguntas de cierre: ¿cumpliste tus focos? ¿hiciste IC que era del equipo? ¿a quién no tocaste que deberías?
+
+El veredicto es del agente y debe ser honesto — el usuario decide, pero decide con datos.

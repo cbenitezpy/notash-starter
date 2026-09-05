@@ -1,7 +1,7 @@
 # Setup de agentes
 
 El contexto vive en el vault, no en el chat. Por eso el agente es intercambiable:
-podés usar Claude en casa y Copilot en la oficina sobre el mismo vault.
+podés usar Claude en casa, Copilot en la oficina y Cursor en el medio, sobre el mismo vault.
 
 ## Claude Code
 
@@ -28,6 +28,17 @@ podés usar Claude en casa y Copilot en la oficina sobre el mismo vault.
 3. Si usás `GEMINI.md` como archivo de contexto, creálo apuntando a `CLAUDE.md`
    (o duplicá el contenido — pero entonces mantené los dos).
 
+## Cursor
+
+1. Abrí el vault como carpeta en Cursor.
+2. Cursor carga `.cursor/rules/vault.mdc` automáticamente (`alwaysApply: true`):
+   apunta a `CLAUDE.md` como fuente de verdad y fija las reglas de interacción
+   (una pregunta por vez, no inventar owners ni fechas, no crear stubs).
+3. Los comandos ya están como *custom commands* en `.cursor/commands/`:
+   escribí `/hoy`, `/meeting` o `/semana` en el chat del agente y listo.
+4. `AGENTS.md` en la raíz también lo lee Cursor (y cualquier agente que siga ese
+   estándar) — es un resumen que redirige a `CLAUDE.md`.
+
 ## Personalización (importante)
 
 Los comandos vienen calibrados para un rol de gestión tipo VP/EM
@@ -35,7 +46,9 @@ Los comandos vienen calibrados para un rol de gestión tipo VP/EM
 Si tu rol es otro, editá dos cosas:
 
 1. `CLAUDE.md` → sección "Quién es el usuario" y la definición de valor.
-2. Los `prompt` de los `.toml` → el ranking del foco y qué cuenta como drift.
+2. Los prompts de los comandos → el ranking del foco y qué cuenta como drift.
+   Están duplicados en `.gemini/commands/*.toml` y `.cursor/commands/*.md`: editá ambos
+   (o generá uno desde el otro) para que todos los agentes hagan lo mismo.
 
 El sistema funciona en la medida en que la definición de valor sea honesta.
 Si le mentís al CLAUDE.md, el agente te va a felicitar por perderte.
